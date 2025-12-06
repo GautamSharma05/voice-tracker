@@ -4,9 +4,6 @@ import {
   Trash2,
   Calendar,
   AlertCircle,
-  Clock,
-  CheckCircle2,
-  Circle,
 } from "lucide-react";
 import { TaskListProps } from "../types";
 
