@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import { useState, useCallback } from "react";
 import { List, Kanban, Search } from "lucide-react";
 import { Toaster, toast } from "react-hot-toast";
 import TaskList from "./components/TaskList";
@@ -23,7 +23,6 @@ function App() {
   const [searchTerm, setSearchTerm] = useState("");
   const debouncedSearch = useDebounce(searchTerm, 500);
 
-  // Derived filters
   const filters = { search: debouncedSearch, status: "" };
 
   const { data: tasks = [], isLoading, isError, error } = useTasks(filters);

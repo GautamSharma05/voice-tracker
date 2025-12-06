@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { z } from "zod";
 import { Task } from "../api";
 
-// Define Zod schema for validation
+
 const taskSchema = z.object({
   title: z
     .string({ message: "Title is required" })

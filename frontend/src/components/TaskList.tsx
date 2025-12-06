@@ -15,7 +15,7 @@ const TaskList: React.FC<TaskListProps> = ({ tasks, onEdit, onDelete }) => {
       case "Done":
         return "status-done";
       default:
-        return "status-todo"; // To Do
+        return "status-todo"; 
     }
   };
 

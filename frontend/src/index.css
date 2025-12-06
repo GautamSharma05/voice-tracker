@@ -26,13 +26,12 @@
   
   --radius: 0.5rem;
   
-  /* Linear-Style Soft Shadows */
+
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
   --shadow-md: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.08);
   --shadow-lg: 0 20px 25px -5px rgb(0 0 0 / 0.08), 0 8px 10px -6px rgb(0 0 0 / 0.08);
 
-  /* Status & Priority Colors (High Contrast Accents) */
   --color-todo: #71717a; /* Zinc 500 */
   --color-inprogress: #eab308; /* Yellow 500 */
   --color-done: #5e6ad2; /* Indigo 500 */
@@ -40,7 +39,7 @@
   --color-critical: #ef4444;
   --color-high: #f97316;
   --color-medium: #eab308;
-  --color-low: #71717a; /* Neutral for low */
+  --color-low: #71717a; 
 }
 
 body {
@@ -50,7 +49,6 @@ body {
   margin: 0;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  /* Prevent layout shift when scrollbar appears/disappears */
   overflow-y: scroll;
 }
 
@@ -58,7 +56,7 @@ body {
   box-sizing: border-box;
 }
 
-/* Animations */
+
 @keyframes pulse {
   0%, 100% { opacity: 1; transform: scale(1); }
   50% { opacity: 0.5; transform: scale(1.05); }
@@ -85,9 +83,9 @@ body {
   to { transform: translateY(0); opacity: 1; }
 }
 
-/* Utilities */
+
 .container {
-  max-width: 1400px; /* Wider for Kanban */
+  max-width: 1400px;
   margin: 0 auto;
   padding: 2rem 1.5rem;
 }
@@ -97,9 +95,7 @@ body {
   .desktop-only { display: inline; }
 }
 
-/* Linear-Like Components */
 
-/* Card */
 .card {
   background-color: var(--card);
   color: var(--card-foreground);
@@ -114,7 +110,7 @@ body {
 }
 .card-content { padding: 1.25rem; }
 
-/* Interactive Card (Task) */
+
 .card-interactive {
   background: white;
   border: 1px solid var(--border);
@@ -134,7 +130,7 @@ body {
   cursor: grabbing;
 }
 
-/* Buttons */
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -192,7 +188,7 @@ body {
 }
 .btn-destructive:hover { background-color: #fecaca; }
 
-/* Inputs */
+
 .input, .select, textarea {
   display: flex;
   height: 2.25rem;
@@ -211,11 +207,11 @@ body {
   box-shadow: 0 0 0 2px rgba(0,0,0,0.05);
 }
 
-/* Badges */
+
 .badge {
   display: inline-flex;
   align-items: center;
-  border-radius: 0.25rem; /* Boxier tags */
+  border-radius: 0.25rem;
   padding: 0.125rem 0.375rem;
   font-size: 0.7rem;
   font-weight: 500;
@@ -334,9 +330,6 @@ body {
 .task-list-scrollable::-webkit-scrollbar { width: 4px; }
 .task-list-scrollable::-webkit-scrollbar-thumb { background-color: #e4e4e7; border-radius: 4px; }
 
-/* Bright Style Components */
-
-/* Updated Card */
 .card-interactive {
   background: white;
   border: 1px solid var(--border);
@@ -353,7 +346,7 @@ body {
   border-color: #d4d4d8;
 }
 
-/* Ghost Action Button (+ New Task) */
+
 .btn-column-action {
   display: flex;
   align-items: center;
@@ -362,21 +355,21 @@ body {
   padding: 0.625rem 0.5rem;
   background: transparent;
   border: none;
-  color: #a1a1aa; /* More subtle default color */
+  color: #a1a1aa;
   font-size: 0.875rem;
   font-weight: 500;
   cursor: pointer;
   border-radius: 0.5rem;
   transition: all 0.2s;
   margin-top: 0.25rem;
-  text-transform: none; /* remove uppercase for softer feel */
+  text-transform: none; 
 }
 .btn-column-action:hover {
   background-color: var(--secondary);
   color: var(--foreground);
 }
 
-/* Helpers */
+
 .flex-between { display: flex; justify-content: space-between; align-items: center; }
 .flex-col { display: flex; flex-direction: column; }
 .flex-center { display: flex; align-items: center; justify-content: center; }
@@ -395,7 +388,7 @@ body {
 
 
 
-/* Modern Table Styles */
+
 .modern-table {
   width: 100%;
   border-collapse: separate;
@@ -404,7 +397,7 @@ body {
 }
 
 .modern-table th {
-  background-color: #f8fafc; /* Very light gray */
+  background-color: #f8fafc; 
   color: var(--muted-foreground);
   font-weight: 600;
   text-align: left;
@@ -429,7 +422,7 @@ body {
 .modern-table tr:last-child td:first-child { border-bottom-left-radius: 0.5rem; }
 .modern-table tr:last-child td:last-child { border-bottom-right-radius: 0.5rem; }
 
-/* Outline Badges */
+
 .badge-outline {
   display: inline-flex;
   align-items: center;
@@ -443,9 +436,9 @@ body {
   color: var(--muted-foreground);
 }
 
-/* VoiceTask Theme Overrides */
 
-/* Segmented Control */
+
+
 .segmented-control {
   display: inline-flex;
   padding: 0.25rem;
@@ -476,14 +469,14 @@ body {
   color: var(--foreground);
 }
 
-/* Header Refinement */
+
 header {
   border-bottom: 1px solid var(--border);
   background-color: rgba(255, 255, 255, 0.9) !important;
   backdrop-filter: blur(8px);
 }
 
-/* Logo */
+
 .logo-icon {
   display: flex;
   height: 2rem;
@@ -497,7 +490,7 @@ header {
   font-size: 1.1rem;
 }
 
-/* Input Search Update */
+
 .input-search-wrapper {
   position: relative;
   width: 100%;
@@ -520,7 +513,7 @@ header {
   box-shadow: 0 0 0 2px rgba(0,0,0,0.05);
 }
 
-/* Button Overrides for Header */
+
 .btn-header-primary {
   background-color: #09090b; /* Black */
   color: white;
@@ -568,11 +561,7 @@ header {
   color: var(--muted-foreground);
 }
 
-/* ========================== */
-/* TaskBoard Component Styles */
-/* ========================== */
 
-/* Rich Column Header */
 .column-header-rich {
   display: flex;
   justify-content: space-between;
@@ -626,7 +615,7 @@ header {
   border-color: #d4d4d8;
 }
 
-/* Rich Task Card */
+
 .card-rich {
   background: white;
   border: 1px solid var(--border);
@@ -644,7 +633,7 @@ header {
   border-color: #d4d4d8;
 }
 
-/* Pill Tags */
+
 .pill-tag {
   display: inline-flex;
   align-items: center;
@@ -677,7 +666,7 @@ header {
   color: #0284c7;
 }
 
-/* Progress Section */
+
 .progress-container {
   display: flex;
   justify-content: space-between;
@@ -701,7 +690,7 @@ header {
   transition: width 0.3s ease;
 }
 
-/* Avatar Stack */
+
 .avatar-stack {
   display: flex;
   align-items: center;
@@ -737,7 +726,7 @@ header {
   margin-right: -0.5rem;
 }
 
-/* Card Stats */
+
 .card-stats {
   display: flex;
   align-items: center;
@@ -756,11 +745,7 @@ header {
   opacity: 0.7;
 }
 
-/* ========================== */
-/* View Container - Prevents Layout Shifting */
-/* ========================== */
 
-/* Container for both views - fixed dimensions */
 .view-container {
   position: relative;
   width: 100%;
@@ -769,7 +754,7 @@ header {
   overflow: hidden;
 }
 
-/* Board view takes full container */
+
 .view-container > .task-board-grid {
   height: 100%;
   min-height: 100%;
@@ -777,7 +762,7 @@ header {
   overflow: hidden;
 }
 
-/* List container takes full container with internal scroll */
+
 .task-list-container {
   height: 100%;
   min-height: 100%;
@@ -797,19 +782,18 @@ header {
   border-radius: 4px;
 }
 
-/* Force the table to respect container width */
+
 .task-list-container .modern-table {
   table-layout: fixed;
   width: 100%;
 }
 
-/* Ensure card inside list container doesn't overflow */
+
 .task-list-container > .card {
   width: 100%;
   max-width: 100%;
 }
 
-/* Remove conflicting height from board grid - use container's height */
 .task-board-grid {
   height: 100% !important;
   min-height: unset !important;
